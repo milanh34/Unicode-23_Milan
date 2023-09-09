@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const mailid =[];
-    const passid =[];
+    const mailid = [];
+    const passid = [];
     const authForm = document.getElementById('auth-form');
     const registerLink = document.getElementById('register-link');
     const loginLink = document.getElementById('login-link');
@@ -243,76 +243,82 @@ document.addEventListener('DOMContentLoaded', function () {
     registerForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const email1 = document.getElementById('email1').value;
-        const newpass = document.getElementById('new-pass').value;
 
-        alert('Registration successful! You can now log in.');
-
-        mailid.push(email1);
-        passid.push(newpass);
-
-        document.getElementById('email1').value = '';
-        document.getElementById('new-pass').value = '';
-
-        authForm.style.display = 'block';
-        registerForm.style.display = 'none';
+        function validate() {                   //function to check all above conditions when submitting and submit form if all conditions are met
+            const fullname = document.getElementById("full-name").value;
+            const emailid = document.getElementById("email1").value;
+            const pass = document.getElementById("new-pass").value;
+            const confpass = document.getElementById("conf-pass").value;
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passError = document.getElementById('passError');
+            const confpassError = document.getElementById('confpassError');
+            if (fullname && emailid && pass && confpass && nameError.textContent == "" && emailError.textContent == "" && passError.textContent == "" && confpassError.textContent == "") {
+                return true;
+            }
+        }
+        if (validate() == true) {
+            const email1 = document.getElementById('email1').value;
+            const newpass = document.getElementById('new-pass').value;
+            mailid.push(email1);
+            passid.push(newpass);
+            alert('Registration successful! You can now log in.');
+            authForm.style.display = 'block';
+            registerForm.style.display = 'none';
+        }
+        else {
+            alert('Registration unsuccessful :( Please Enter all details');
+            registerForm.style.display = 'none';
+            authForm.style.display = 'block';
+            errorMessage.textContent = '';
+        }
     });
 });
-function checkname(){                //function to check error in name
+function checkname() {                //function to check error in name
     const fullname = document.getElementById("full-name").value;
     const nameError = document.getElementById('nameError');
-    if(fullname.length < 5){             //condition 
-        nameError.textContent = 'Name must not be less than 5 characters';        
-        fullname.focus();
+    if (fullname.length < 5) {             //condition 
+        nameError.textContent = 'Name must not be less than 5 characters';
     }
-    else{
-        nameError.textContent='';
-        this.submit();
+    else {
+        nameError.textContent = '';
     }
 }
-function checkemail(){                //function to check error in email
+function checkemail() {                //function to check error in email
     const emailid = document.getElementById("email1").value;
     const emailError = document.getElementById('emailError');
-    if(emailid.indexOf("@") == -1){                     //condition
+    if (emailid.indexOf("@") == -1) {                     //condition
         emailError.textContent = 'Email Id should have @ character in it';
-        emailid.focus();
     }
-    else{
-        emailError.textContent='';
-        this.submit();
+    else {
+        emailError.textContent = '';
     }
 }
-function checkpass(){                 //function to check erro in password
+function checkpass() {                 //function to check erro in password
     const name = document.getElementById("full-name").value;
     const pass = document.getElementById("new-pass").value;
     const passError = document.getElementById('passError');
-    if(pass.length < 8){                  //condition 1
+    if (pass.length < 8) {                  //condition 1
         passError.textContent = 'Password cannot be less than 8 characters';
-        pass.focus();
-    } 
-    else if(pass == "password"){           //condition 2
+    }
+    else if (pass == "password") {           //condition 2
         passError.textContent = 'Password cannot be "password"';
-        pass.focus();
     }
-    else if(pass === name){                 //condition 3
+    else if (pass === name) {                 //condition 3
         passError.textContent = 'Password cannot be name of the user';
-        pass.focus();
     }
-    else{
-        passError.textContent='';
-        this.submit();
+    else {
+        passError.textContent = '';
     }
 }
-function confpass(){                         //function to check error in confirm password
+function confpass() {                         //function to check error in confirm password
     const pass = document.getElementById("new-pass").value;
     const confpass = document.getElementById("conf-pass").value;
     const confError = document.getElementById('confpassError');
-    if(confpass != pass){                   //condition
+    if (confpass != pass) {                   //condition
         confError.textContent = 'Password and confirm password should match';
-        confpass.focus();
     }
-    else{
-        confError.textContent='';
-        this.submit();
+    else {
+        confError.textContent = '';
     }
 }
