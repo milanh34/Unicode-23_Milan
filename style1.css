@@ -1,0 +1,104 @@
+@media screen and (max-width: 500px) {
+    nav h1 {
+        /* border: 1px solid cyan; */
+        letter-spacing: 0px;
+        padding-left: 5px;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav {
+        /* border: 1px solid blue; */
+        max-width: 500px;
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 90px;
+    }
+
+    nav ul {
+        /* border: 1px solid orange; */
+        font-size: 15px;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    nav li {
+        /* border: 1px solid pink; */
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .events h1 {
+        /* border: 1px solid gray; */
+        padding: 0;
+        margin: 40px 0px 5px 0px;
+        text-align: center;
+    }
+
+    .about,
+    .contact {
+        /* border: 1px solid black; */
+        padding: 60px 10px 0px 10px;
+    }
+
+    .about p,
+    .contact p 
+    .call,
+    .mail{
+        font-size: 15px;
+    }
+
+    .back{
+        top: 30px;
+        margin-left: 10px;
+    }
+
+    .event-name{
+        margin-top: 50px;
+    }
+
+    iframe{
+        margin: auto 5px;
+        height: 250px;
+    }
+
+    .booking-section{
+        /* border: 1px solid black; */
+        max-width: 500px;
+    }
+
+    .available-seats{
+        width: 15px;
+        height: 12px;
+        background-color: #fff;
+        border: 1px solid rgb(2, 160, 2);
+        margin: 3px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .user-container {
+        max-width: 500px;
+        height: 95vh;
+    }
+
+    .form-container {
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    #form-head {
+        font-size: 25px;
+    }
+
+    .form-container input {
+        width: 350px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+}

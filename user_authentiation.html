@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookItNow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <h1>BOOK IT NOW</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Your Bookings</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="user-container">
+    <div class="form-container">
+        <h1 id="form-head">User Authentication</h1>
+        <p id="form-p">Login / Register to confirm tickets</p>
+        <form id="auth-form">
+            <label for="gmail">Email :</label>
+            <input type="email" id="gmail" placeholder="example@xyz.com" required>
+
+            <label for="pass">Password :</label>
+            <input type="password" id="pass" placeholder="Enter your password" required>
+
+            <button type="submit" class="event-button">Login</button>
+            <p class="register-link" id="register-link">Don't have an account? Register here</p>
+        </form>
+
+        <form id="register" class="register-form">
+            <label for="name">Your Full Name : </label>
+            <input type="password" id="full-name" onchange="checkname()" placeholder="Enter your name"><br>
+            <span id="nameError"></span>
+
+            <label for="email1">Your Email : </label>
+            <input type="email" id="email1" onchange="checkemail()" placeholder="example@xyz.com" required><br>
+            <span id="emailError"></span>
+
+            <label for="new-pass">Set Password :</label>
+            <input type="password" id="new-pass" onchange="checkpass()" placeholder="Enter a new password"><br>
+            <span id="passError"></span>
+
+            <label for="conf-pass">Confirm Password :</label>
+            <input type="password" id="conf-pass" onchange="confpass()" placeholder="Enter password again"><br>
+            <span id="confpassError"></span>
+
+            <button type="submit" class="event-button">Register</button>
+
+            
+            <p class="login-link" id="login-link">Already have an account? Login here</p>
+        </form>
+    </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Book It Now</p>
+    </footer>
+</body>
+</html>

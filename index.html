@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookItNow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/3a9c7718dd.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <h1>BOOK IT NOW</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Your Bookings</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="search-container">
+        <div id="search-box">
+            <input type="text" placeholder="Search Events" id="search" onkeyup="if(event.keyCode === 13) {searchEvents();}" onblur="searchEvents()">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+        </div>
+        <div class="filter-and-sort">
+            <div id="filter-box">
+                <label for="filter" id="filter-label">Filter </label>
+                <select id="filter" onchange="filtering()">
+                    <option value="all">All</option>
+                    <option value="movies">Movies</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                </select>
+            </div>
+            <div id="sort-box">
+                <label for="sort">Sort</label>
+                <select id="sort" onchange="sorting()">
+                    <option value="date">Date</option>
+                    <option value="location">Location</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <section class="events">
+        <div id="event-heading">
+            <h1>Available Events</h1>
+        </div>
+        <section id="events-list"></section>
+    </section>
+    <section class="about" id="about-us">
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur repellendus ex facere illo doloribus
+            porro, recusandae quidem eius? Harum velit pariatur minus sint nesciunt assumenda molestias, libero, unde
+            laboriosam consequuntur eius repellendus. Deserunt quis ipsa tempora cum perferendis. Corrupti vero commodi
+            quaerat! Neque ipsum ex, ullam eveniet illo natus laudantium. Dolorem aliquam esse recusandae nesciunt minus
+            doloremque aspernatur, neque temporibus aliquid omnis libero incidunt amet quibusdam dolores quidem corrupti
+            quia, sit voluptas perspiciatis ut reprehenderit molestiae accusantium? Natus aliquid atque facilis. Eius
+            quis molestias repellendus laudantium delectus ipsum, culpa placeat id distinctio et maxime, hic fugit iste
+            cum sunt architecto!</p>
+    </section>
+    <section class="contact" id="contact-us">
+        <h1>Contact Us</h1>
+        <div class="contact-container">
+            <div class="call">
+                <i class="fa-solid fa-phone"></i>
+                <span>9998887770</span>
+            </div>
+            <div class="mail">
+                <i class="fa-solid fa-envelope"></i>
+                <span>bookitnow@gmail.com</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Book It Now</p>
+    </footer>
+</body>
+
+</html>
