@@ -1,7 +1,7 @@
 # Unicode-23_Milan
 This repository contains the codes of tasks for the DJS Unicode 2023 interviews.
 
-This is a demo ticket booking website. There are many features in this like searching, filtering, sorting events. Also there is a layout for ticket booking system where you can select the seats you want from the seats layout. User authentication has made, so unless you are registered you cannot book tickets. The wesbite is very much interactive and responsive. Animations have been used. The website is also mobile friendly. This project has been deployed on Netlify and the website link for the same is : https://unicode-23-milan.netlify.app . Please refer to the screenshots provided below to see the output.
+This is a demo ticket booking website. There are many features in this like searching, filtering, sorting events. Also there is a layout for ticket booking system where you can select the seats you want from the seats layout. User authentication has made, so unless you are registered you cannot book tickets. The wesbite is very much interactive and responsive. Animations have been used. The website is also mobile friendly. This project has been deployed on Netlify and the website link for the same is : https://bookitnow-demo.netlify.app/ . Please refer to the screenshots provided below to see the output.
 
 Thank You.
 
